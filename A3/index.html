@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--This help load the selected font from google-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.css" integrity="sha512-/ObUqh1cljaDdbTKrXRG+6FTTS9RRDWOuBjMKeD7SZeQRICPDVA/qOJjWNilrNplbu7TNeqrBJ/LGBXL2EpaUg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--This help load the fullpage scrolling-->
+  <script src="https://kit.fontawesome.com/1a6762b1eb.js" crossorigin="anonymous"></script> <!--This help load icon from fontawesome-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css" /> <!--This help load function from shoelace library-->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace-autoloader.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Bundaberg</title> <!--This is the title of the website which will be shown in the tab-->
+</head>
+
+<body>
+  <header>
+    <sl-icon-button name="volume-up" id="sound-btn"></sl-icon-button> <!--This is the music icon where user can play or mute the background music-->
+  </header>
+  
+  <div id="fullpage"> <!--The fullpage function-->
+    
+    <!--========== Home section ==========-->
+      <div class="section section-home"> <!--Different sections in fullpage-->
+
+        <!--NAVIGATION-->
+          <nav>
+            <label for="burger" class="hamburger">&#9776;</label> <!--This is to create a hamburger menu in mobile and desktop version-->
+            <input id="burger" type="checkbox">
+
+            <ul> <!--This is the hyperlink that leads to different pages-->
+                <li><a href="#">Shop</a></li> 
+                <li><a href="#">Our mission</a></li>
+                <li><a href="#">Brew method</a></li>
+            </ul>
+            
+          </nav>
+
+        <img id="logo" src="images/logo.webp" alt="logo of Bundaberg"> <!--This is the logo of the brand-->
+
+        <i class="fa-solid fa-user icon"></i> <!--This is icons that located in the navigation bar-->
+
+        <i class="fa-solid fa-cart-shopping icon"></i>
+
+        <i class="fa-solid fa-globe icon"></i>
+
+        <button class="promo-btn">Promotion</button> <!--Button to show latest promotion-->
+        
+        <!-- dialog - latest promotion --> <!--A pop up dialog to show the latest promotion messsage-->
+        <sl-dialog label="Latest promotion" id="latest-promo">
+        <img src="images/promo.png" alt="Latest promotion"> <!--Product image that was included in promotion-->
+        <p>Get 20% off all Bundaberg beverages, including Ginger Beer and fruit flavors! Perfect for summer picnics. Available online and at select stockists. Cheers!</p> <!--Description for promotion-->
+        </sl-dialog>
+
+        <img src="images/hero.png" alt="hero image" id="hero"> <!--The product image on the home section-->
+
+        <h1 class="title">Bundaberg</h1>
+      
+        <p class="slogan">#Brewed for better</p> <!--Slogan of Bundaberg-->
+
+        <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll"> <!--Animation that opt user to keep on scrolling-->
+        
+      </div>
+
+     <!--========== Information section ==========-->
+     <div class="section section-information">
+
+      <div class="scroll-bg1"></div> <!--The first page to create a scrolling effect-->
+      
+      <div class="scroll-bg2"> <!--The second page where contain the element to show scrolling effect as if they ease in from down to up-->
+
+        <div class="info1"> <!--This class show the information related to the drinks in bubble shape-->
+          <img src="images/organic.png" alt="icon of natural ingredients" class="natural">
+          <p>Natural ingredients</p>
+          <img src="images/bubble1.png" alt="image of bubbles" class="bubble1">
+        </div>
+
+        <div class="info2">
+          <img src="images/siphon.png" alt="icon of brewing" class="brew">
+          <p>Traditional brewed<br>method</p>
+          <img src="images/bubble2.png" alt="image of bubbles" class="bubble2">
+        </div>
+
+        <div class="info3">
+          <img src="images/tongue.png" alt="icon of taste" class="taste">
+          <p>Real flavour taste</p>
+          <img src="images/bubble2.png" alt="image of bubbles" class="bubble3">
+        </div>
+
+        <img src="images/bottles.png" alt="image of the products" id="information">
+
+        <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll">
+      </div>
+
+    </div>
+
+     <!--========== Best selling ==========-->
+     <div class="section section-best-selling">
+
+      <h2 class="selling">Best selling</h2> <!--Title of the section-->
+      
+      <img src="images/barrel.png" alt="image of barrel to showcase product" class="barrel">
+
+      <!-- information of gingerbeer -->
+      <img src="images/ginger.png" alt="image of ginger beer" class="ginger"> <!--Show image of the best selling product-->
+
+      <sl-tooltip placement="right" id="gingerbeer"> <!--Make description appear on screen when user hover through the plus button-->
+        <div slot="content">
+          <strong>Gingerbeer</strong>
+          <p>Bundaberg Ginger Beer is a favorite for its bold flavor made from real ginger. Its perfect balance of spice and sweetness makes it great for sipping or mixing.</p>
+        </div>
+        <i class="fa-solid fa-plus ginger1"></i>
+      </sl-tooltip>
+
+      <!-- information of pink grapefruit -->
+      <img src="images/grapefruit.png" alt="image of graperfruit drink" class="grapefruit">
+
+      <sl-tooltip placement="left" id="pink">
+        <div slot="content">
+          <strong>Pink Grapefruit</strong>
+          <p>Pink Grapefruit is loved for its vibrant flavor from sun-ripened fruit. Its sweet-tangy balance is perfect for refreshing drinks or adding zest to dishes.</p>
+        </div>
+        <i class="fa-solid fa-plus pink1"></i>
+      </sl-tooltip>
+
+      <!-- information of lemon, lime bitter -->
+      <img src="images/lemon.png" alt="image of lemon drink" class="lemon">
+
+      <sl-tooltip placement="right" id="lemonlime">
+        <div slot="content">
+          <strong>Lemon, lime bitter</strong>
+          <p>
+            Lemon, Lime Bitter is loved for its vibrant citrus flavor. With balanced tartness and sweetness, it’s perfect for sipping or mixing, adding a refreshing kick to any occasion.</p>
+        </div>
+        <i class="fa-solid fa-plus lemon1"></i>
+      </sl-tooltip>
+
+      <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll">
+
+     </div>
+
+     <!--========== About us ==========--> <!--Contain 3 different pages with the use of image slider-->
+     <div class="section section-about-us">
+      
+          <!-- Slide 1 -->
+
+          <div class="slide founder-slide"> <!--Show information related to the founder-->
+            <div class="bg-founder"> 
+
+              <div class="founder-img">
+                <img src="images/Businessman.jpg" alt="image of the founder" class="founder">
+              </div>
+            
+         
+              <div class="content">
+                <h2>About Us</h2>
+                <p>Bundaberg Brewed Drinks, established in 1968 by the Fleming family in Bundaberg, Queensland, is dedicated to producing high-quality, naturally brewed beverages that celebrate authentic Australian flavors. Known for its iconic ginger beer, the company combines time-honored brewing methods with carefully sourced ingredients, resulting in rich, distinctive tastes. Each drink is crafted in small batches to ensure the highest quality and freshness, reflecting the vibrant essence of its tropical surroundings. With a commitment to craftsmanship and a passion for innovation, Bundaberg Brewed Drinks continues to delight customers both locally and globally with its range of refreshing, flavorful beverages.</p>
+                <button class="detail1">More about us</button>
+              </div>
+            </div>
+
+            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+
+          </div>
+
+            <!-- Slide 2 -->
+
+            <div class="slide family-slide"> <!--Show information related to the founder's family as Bundaberg is a family business-->
+              <div class="bg-family">
+           
+                <div class="content">
+                  <h2>Our family</h2>
+                  <p>At Bundaberg Brewed Drinks, we take pride in our family heritage, founded by the Fleming family in 1968. Our commitment to quality and craftsmanship has been passed down through generations, using traditional brewing methods and locally sourced ingredients. This dedication to authenticity shapes our products and fosters a strong connection with our community. As we grow, our family values remain at the heart of everything we do, guiding us in creating refreshing drinks for everyone to enjoy.</p>
+                  <button class="detail2">Know us more</button> <!--Allow user to look for more information with a click on the button-->
+                </div>
+
+                <div class="family-img">
+                  <img src="images/family.jpg" alt="image of the founder's family" class="family">
+                </div>
+
+              </div>
+
+              <button class="prev"><i class="fa-solid fa-chevron-left"></i></button> <!--Allow user to click for previous slide-->
+              <button class="next"><i class="fa-solid fa-chevron-right"></i></button> <!--Allow user to click for next slide-->
+
+            </div>
+
+              <!-- Slide 3 --> <!--Show information related to the crafting of Bundaberg's drinks-->
+              <div class="slide craft-slide">
+                <div class="bg-craft">
+
+                  <div class="craft-img">
+                    <img src="images/craft.jpg" alt="image of working crafting the beer" class="craft">
+                  </div>
+             
+                  <div class="content">
+                    <h2>Our craft</h2>
+                    <p>At Bundaberg Brewed Drinks, our craft is all about blending tradition with passion to create exceptional beverages. We use time-honored brewing methods and locally sourced ingredients, ensuring that each drink is crafted in small batches for the highest quality and flavor. Our dedicated brewers pay meticulous attention to detail, capturing the rich essence of our ingredients and celebrating authentic Australian flavors. This commitment to craftsmanship shines through in every sip, allowing us to deliver unique, refreshing drinks that stand out and elevate any occasion.</p>
+                    <button class="detail3">More detail</button>
+                  </div>
+
+                </div>
+
+                <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+    
+              </div>
+
+              <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll">
+              
+     </div>
+
+     <!--========== Brewniverse ==========--> <!--Inform user about method to integrate BUndaberg's drink into food and cocktails-->
+     <div class="section section-brewniverse">
+
+      <div class="brewniverse">
+
+        <div class="pitures">
+        <img src="images/recipe.jpg" alt="image of food recipe" class="recipe">
+        <button class="recipe-btn">Recipe</button> <!--Provide user more recipe to learn from-->
+
+        <img src="images/drinks.png" alt="image of drinks" class="mixology">
+        <button class="drinks-btn">Mixology</button> <!--Provide mixology to allow user to create new types of cocktails-->
+        </div>
+
+        <div class="content">
+          <h2>Brewniverse</h2>
+
+          <p>Discover the delicious possibilities of Bundaberg Brewed Drinks by trying our crafted recipes that pair perfectly with our non-alcoholic beverages! Whether you’re whipping up a refreshing mocktail or enhancing your favorite dishes, our brewed drinks add a unique flavor twist that elevates any meal or gathering. Explore our curated mixology and food recipes that showcase the bold, authentic taste of our beverages, from our iconic ginger beer to our fruit-flavored brews. Dive into a world of flavor and creativity—your taste buds will thank you!</p>
+        </div>
+
+      </div>
+
+      <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll">
+      
+     </div>
+
+     <!--========== Stockist ==========--> <!--Inform user where they could purchase Bundaberg's drink from-->
+     <div class="section section-stockist">
+
+      <div class="all-stockists"> <!--Images and link lead to the selected stockist-->
+
+        <div class="row">
+          <img src="images/stockist1.png" alt="images of stockist" class="stockist">
+          <img src="images/stockist2.png" alt="images of stockist" class="stockist">
+          <img src="images/stockist3.png" alt="images of stockist" class="stockist">
+        </div>
+
+        <div class="row">
+          <img src="images/stockist4.png" alt="images of stockist" class="stockist">
+          <img src="images/stockist5.png" alt="images of stockist" class="stockist">
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>Stockists</h2>
+        <p>You can find Bundaberg Brewed Drinks at various stockists, from local retailers to major supermarkets. Discover the authentic taste of Bundaberg today—grab a bottle and elevate your refreshment experience!</p>
+      </div>
+
+      <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll">
+    
+     </div>
+
+     <!--========== Reviews ==========--> <!--Show reviews from customer that include ratings and comments-->
+     <div class="section section-reviews">
+
+      <div class="bg-review"></div>
+
+      <div class="slider"> <!--A carousel was used to show the review-->
+        <sl-carousel navigation pagination slides-per-page="3" slides-per-move="1"> <!--Allow user to view 3 reviews in one and 1 review will be move when arrow was clicked-->
+
+          <sl-carousel-item style="background: #9F4F18;"> <!--One whole review-->
+            <div class="review">
+              <h2>Jessica Lee</h2> <!--Name of the customer-->
+              <p class="rating">Ratings:</p> <!--Ratings from the customer-->
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"I tried the Bundaberg Lemonade; it was refreshing but too sweet for my taste. I prefer something tangier."</p> <!--Comments of the customer-->
+              <div class="initial">J</div> <!--The initial as a profile pic of the customer-->
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Mark Thompson</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"Bundaberg Passionfruit drink is refreshing and delicious—perfect for summer! I love the natural ingredients and would buy it again!"</p>
+              <div class="initial">M</div>
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Oliver Bennett</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"I liked the Bundaberg Passionfruit drink! It's refreshing but could use more carbonation. Great for summer!"</p>
+              <div class="initial">O</div>
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>David Parker</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"Bundaberg Ginger Beer is my favorite! Its bold flavor is fantastic on its own or in cocktails. Highly recommend!"</p>
+              <div class="initial">D</div>
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Emma Carter</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"Bundaberg Brewed Drinks are always a hit! I love the natural ingredients and small-batch brewing—perfect for family gatherings!"</p>
+              <div class="initial">E</div>
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Emily Johnson</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"I love Bundaberg Ginger Beer! Its bold flavor is unmatched, making it perfect for cocktails or on its own. It's my go-to drink!"</p>
+              <div class="initial">E</div>
+            </div>
+          </sl-carousel-item>
+
+        </sl-carousel>
+     </div>
+
+      <!-- mobile version of reviews to adapt to a smaller screen size to have a better view for user-->
+      <div class="review-mobile">
+        
+        <sl-carousel navigation pagination slides-per-page="2" slides-per-move="1">
+          
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Jessica Lee</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"I tried the Bundaberg Lemonade; it was refreshing but too sweet for my taste. I prefer something tangier."</p>
+              <div class="initial">J</div>
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Mark Thompson</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"Bundaberg Passionfruit drink is refreshing and delicious—perfect for summer! I love the natural ingredients and would buy it again!"</p>
+              <div class="initial">M</div>
+            </div>
+          </sl-carousel-item>
+
+          <sl-carousel-item style="background: #9F4F18;">
+            <div class="review">
+              <h2>Oliver Bennett</h2>
+              <p class="rating">Ratings:</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p class="comment">"I liked the Bundaberg Passionfruit drink! It's refreshing but could use more carbonation. Great for summer!"</p>
+              <div class="initial">O</div>
+            </div>
+          </sl-carousel-item>
+
+        </sl-carousel>
+      </div>
+
+      <div class="content">
+      <h2>Reviews</h2>
+      <p>Customers rave about Bundaberg Brewed Drinks for their rich, authentic flavors and the refreshing quality of each beverage. Many appreciate the versatility of our drinks, noting how perfectly they complement both food and cocktails, making every occasion special.</p>
+      </div>
+      
+      <img src="images/loading.png" alt="Opt user to keep scrolling image" class="scroll">
+
+    </div>
+
+     <!--========== newsletter ==========-->
+     <div class="section section-newsletter">
+
+      <img src="images/background.png" alt="background of the last section" class="bg">
+
+      <div class="newsletter"> <!--Opt user to sign up for newsletter to receive latest information-->
+        <h2>Newsletter</h2>
+        <p>Don't miss out our latest news!</p>
+
+        <div class="email"> 
+          <p>Email</p>
+          <button class="sign-up-btn">Sign up</button>
+        </div>
+      </div>
+
+      <div class="footer"> <!--Provide social media's link for user to follow on social media platform to receive latest information and help for the user if they needed to contact the client-->
+        <div class="social">
+          <h3>Follow us</h3>
+          <i class="fa-brands fa-square-facebook media-icon"></i>
+          <i class="fa-brands fa-square-instagram media-icon"></i>
+          <i class="fa-brands fa-square-twitter media-icon"></i>
+        </div>
+
+        <div class="policy">
+          <h3>Policy</h3>
+          <h4>Refund policy</h4>
+          <h4>Terms and conditions</h4>
+        </div>
+
+        <div class="contact">
+          <h3>Contact us</h3>
+          <h4>FAQs</h4>
+          <h4>Email: Bundaberg@gmail.com</h4>
+        </div>
+      </div>
+
+      <!--Copyright-->
+      <p class="copyright">This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.</p>
+      
+      <div class="logo-bg">
+        <img src="images/logo.webp" alt="logo of Bundaberg" class="logo">
+      </div>
+
+    </div>
+  
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> <!--This is to load function from gsap-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script> <!--This is to load the ScrollTrigger effect from gsap-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.js" integrity="sha512-XjHDYXqFXd3cWle8uxMnQFVcpjzm+mWZfJApBAyREtai0v/jJy9Na+PJlmrnaum7qb4B3BnwKAZd47piZRvoZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+<!--
+References:
+Aparicio, Nahima. N.d. “A group of drinks on a table.” Unsplash. https://unsplash.com/photos/agroup-of-drinks-on-a-table-ObUYmcDyQVk.
+
+Creative_captain. N.d. “Organic free icon.” Flaticon. https://www.flaticon.com/freeicon/organic_16027366?k=1727349812094&log-in=google.
+
+Deemakdaksina. N.d. “Arrow right free icon.” Flaticon. https://www.flaticon.com/freeicon/arrow-right_1549454?term=arrow&page=1&position=22&origin=search&related_id=1549454.
+
+Edt.im. N.d. “Instagram free icon.” Flaticon. https://www.flaticon.com/freeicon/instagram_717392?related_id=717392.
+
+FavPNG. 2018. “Featured Recipes - Ginger Beer Root Beer Fizzy Drinks Low-alcohol Beer PNG”.FavPNG. https://favpng.com/png_view/featured-recipes-ginger-beer-root-beer-fizzy-drinkslow-
+alcohol-beer-png/H0f5CTPY.
+
+Feen. N.d. “More free icon.” Flaticon. https://www.flaticon.com/free-icon/more_6015685?term=hamburger&page=1&position=5&origin=search&related_id=6015685.
+
+Ferlič, Janko. 2016. “Man in white and black pinstripe suit jacket.” Unsplash.https://unsplash.com/photos/man-in-white-and-black-pinstripe-suit-jacket-Gjo31ESuRE.
+
+Freepik. N.d. “Costco free icon.” Flaticon. https://www.flaticon.com/free-icon/costco_5968519?term=supermarket+logo&page=1&position=86&origin=search&related_id=5968519.
+
+Freepik. N.d. “Docker free icon.” Flaticon. https://www.flaticon.com/free-icon/docker_5969124?term=supermarket+logo&page=1&position=88&origin=search&related_id=5969124.
+
+Freepik. N.d. “Ebay free icon.” Flaticon. https://www.flaticon.com/free-icon/ebay_5968533?related_id=5968533.
+
+Freepik. N.d. “Facebook free icon.” Flaticon. https://www.flaticon.com/freeicon/facebook_1051360?term=facebook&page=1&position=25&origin=search&related_id=1051360.
+
+Freepik. N.d. “Medium shot family members posting together.” Freepik.https://www.freepik.com/free-photo/medium-shot-family-members-posingtogether_16688996.htm#fromView=search&page=1&position=13&uuid=0c355281-ce23-4e1e-8602-cc7fd2e6cb8d.
+
+Freepik. N.d. “Siphon free icon.” Flaticon. https://www.flaticon.com/free-icon/siphon_12412239?term=brewed&page=1&position=13&origin=search&related_id=12412239.
+
+Freepik. N.d. “Stubby bottle free icon.” Flaticon. https://www.flaticon.com/free-icon/stubbybottle_11335639?term=stubby+bottle&page=1&position=2&origin=search&related_id=11335639.
+
+Freepik. N.d. “Tongue free icon.” Flaticon. https://www.flaticon.com/free-icon/tongue_2842721?term=taste&page=1&position=5&origin=search&related_id=2842721.
+
+Freepik. N.d. “Twitter free icon.” Flaticon. https://www.flaticon.com/free-icon/twitter_739257?term=twitter&page=1&position=15&origin=search&related_id=739257.
+
+Freepik. N.d. “Uber free icon.” Flaticon. https://www.flaticon.com/free-icon/uber_5969183?related_id=5969183.
+
+Freepik. N.d. “User free icon.” Flaticon. https://www.flaticon.com/free-icon/user_456283?term=profile&page=1&position=9&origin=search&related_id=456283.32
+
+Fxquadro. N.d. “Portrait of tattooed, neared hipster male manufacturer presenting beer in the microbrewery.” Freepik. https://www.freepik.com/free-photo/portrait-tattooedbearded-hipster-male-manufacturer-presenting-beermicrobrewery_25866554.htm#fromView=search&page=1&position=6&uuid=70aa2d31-16ea-462a-b755-cfe439b43073.
+
+Haque, Md Tanvirul. N.d. “Meetup free icon.” Flaticon. https://www.flaticon.com/freeicon/meetup_3669956?term=brand+logo&page=1&position=56&origin=search&related_id=3669956.
+
+Kiranshastry. N.d. “Shopping cart free icon.” Flaticon. https://www.flaticon.com/freeicon/shopping-cart_833314?related_id=833314.
+
+Ledoux, Anthony. N.d. “Internet free icon.” Flaticon. https://www.flaticon.com/freeicon/internet_2889312?term=language&page=1&position=6&origin=search&related_id=2889312.
+
+Montes, Pablo. N.d. “Strawberry cake dessert with cream.” Unsplash.https://unsplash.com/photos/strawberry-cake-dessert-with-cream-0nT08Z-MhiE.
+
+Pixel perfect. N.d. “Star free icon.” Flaticon. https://www.flaticon.com/freeicon/star_2107957?term=star&page=1&position=3&origin=search&related_id=2107957.
+
+PNG Egg. N.d. “Ginger beer Fizzy Drinks Root beer Cream soda, beer, food, cocktail png.” https://www.pngegg.com/en/png-npwup.
+
+PNG Egg. N.d. “Grapefruit juice Fizzy Drinks Lemonade Lemon, Lime and Bitters Bundaberg Brewed Drinks, water splash, food, cocktail png.” https://www.pngegg.com/en/png-ypkci.
+
+PNG Egg. N.d. “Lemon, Lime and Bitters Non-alcoholic drink Ginger beer Fizzy Drinks, beer, food, citrus png.” https://www.pngegg.com/en/png-yfvhq.
+
+Thebundabergbarrel. N.d."Bundaberg brewed drinks" Instagram. https://www.instagram.com/thebundabergbarrel/p/C-wAk5loJ-U/.
+-->
